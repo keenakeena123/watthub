@@ -1,0 +1,14 @@
+import requests
+
+url = "https://api.clickup.com/api/v2/oauth/token"
+
+query = {
+  "client_id": "7VH8MHPXIB28ZYVHWOCOTU6A35IM71WO",
+  "client_secret": "QUSY8P9T2W27V21QSRADISY3T61472J7L4EUFWDZR5D9IOVM7YHIXZRF66BLVELV",
+  "code": "2L8GD974YAY8U5PMRYPLMPO1WBVD1MOR"
+}
+
+response = requests.post(url, params=query)
+
+data = response.json()
+print(data)
